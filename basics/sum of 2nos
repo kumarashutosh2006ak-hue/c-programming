@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+    
+    printf("enter 1st number :");
+    scanf("%d",&num1);
+    printf("enter 2st number :");
+    scanf("%d",&num2);
+    
+    printf("the sum of the number is :%d",num1+num2);
+
+    return 0;
+}
