@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int num1;
+    int num2;
+    printf("enter 1st number : ");
+    scanf("%d",&num1);
+    printf("enter 2nd number : ");
+    scanf("%d",&num2);
+    
+    int sum=num1+num2;
+    int dif=num1-num2;
+    int prd=num1*num2;
+    int quo=num1/num2;
+    int rem=num1%num2;
+    
+    printf("the summation of 1st number and 2nd number is: %d\n",sum);
+    printf("the difference  of 1st number and 2nd number is: %d\n",dif);
+    printf("the product of 1st number and 2nd number is: %d\n",prd);
+    printf("the quotient of 1st number and 2nd number is: %d\n",quo);
+    printf("the remainder of 1st number and 2nd number is: %d\n",rem);
+
+    return 0;
+}
