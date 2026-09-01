@@ -12,6 +12,8 @@ int main()
     scanf("%f",&r);
     
     area=pi*r*r;
+
+    // CHANGED: %.2f tells C to round and stop at 2 decimal places
     printf("the area of the circle is %.3f sq units",area);
     
     return 0;
