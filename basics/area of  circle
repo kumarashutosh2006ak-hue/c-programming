@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+    double pi;
+    pi=M_PI;
+    
+    float area;
+    float r;
+    
+    printf("enter the radius of the circle: ");
+    scanf("%f",&r);
+    
+    area=pi*r*r;
+    printf("the area of the circle is %.3f sq units",area);
+    
+    return 0;
+}
