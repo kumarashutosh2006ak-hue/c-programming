@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int P;
+    float ST;
+    float r;
+    float T;
+    
+    printf("enter principal amount: ");
+    scanf("%d",&P);
+    printf("enter rate in decimal: ");
+    scanf("%f",&r);
+    printf("enter time in year: ");
+    scanf("%f",&T);
+    ST=P*r*T;
+    printf("%.2f",ST);
+
+    return 0;
+}
