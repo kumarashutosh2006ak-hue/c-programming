@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+    char lower;
+    char upper;
+    
+    printf("enter a letter in lower case: ");
+    scanf("%c",&lower);
+    
+    upper = toupper(lower);
+    printf("%c",upper);
+
+    return 0;
+}
