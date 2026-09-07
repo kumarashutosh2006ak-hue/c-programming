@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main()
+{
+    char upper;
+    printf("enter a letter in upper case: ");
+    scanf("%c",&upper);
+    char lower = tolower(upper);
+    printf("%c",lower);
+
+    return 0;
+}
