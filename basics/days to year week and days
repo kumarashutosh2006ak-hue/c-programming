@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int d;
+    int day;
+    int week;
+    int year;
+    
+    printf("Enter no. of days: ");
+    scanf("%d",&d);
+    
+    year=d/365;
+    week=(d%365)/7;
+    day =(d/365)%7;
+    
+    printf("%dyear %dweek %dday",year,week,day);
+    
+    
+
+    return 0;
+}
