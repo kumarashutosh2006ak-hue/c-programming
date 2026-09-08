@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int t;
+    int day;
+    int hr;
+    int min;
+    int sec;
+    printf("Enter time in second: ");
+    scanf("%d",&t);
+    day= t/86400;
+    hr = (t/3600)%24;
+    min = (t/60) % 60;
+    sec = t%60;
+    
+    printf("%dday %dhr %dmin %dsec",day,hr,min,sec);
+    
+    
+
+    return 0;
+}
