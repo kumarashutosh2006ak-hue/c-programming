@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{
+	float num_1;
+	float num_2;
+	printf("enter 1st number: ");
+	scanf("%f",&num_1);
+	printf("enter 2nd number: ");
+	scanf("%f",&num_2);
+	
+	if(num_1>num_2){
+	    printf("the number %.2f is greater that %.2f",num_1,num_2);
+	    return 0;
+	}
+	else if(num_1<num_2){
+	    printf("the number %.2f is greater that %.2f",num_2,num_1);
+	    return 0;
+	}
+	else{
+	    printf("number %.2f and %.2f are equal",num_1,num_2);
+	    return 0;
+	}
+	
+
+	return 0;
+}
