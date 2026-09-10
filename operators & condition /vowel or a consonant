@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    char alphabet;
+    printf("enter a alphabet(a-z) to check: ");
+    scanf("%c",&alphabet);
+    
+    if((alphabet >= 'a' && alphabet <= 'z') ||
+       (alphabet >= 'A' && alphabet <= 'Z'))
+       {
+           if(alphabet=='a' || alphabet=='A' || 
+       alphabet=='e' || alphabet=='E' || 
+       alphabet=='i' || alphabet=='I' || 
+       alphabet=='o' || alphabet=='O' || 
+       alphabet=='u' || alphabet=='U'){
+           printf("%c alphabet is vowel",alphabet);
+       }
+       else{
+           printf("%c alphabet is consonants ",alphabet);
+       }
+       
+    }
+    else{
+        printf("enter a valid alphabet");
+    }
+    return 0;
+}
