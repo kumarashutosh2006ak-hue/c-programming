@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    printf("enter a number: ");
+    scanf("%d",&num);
+    
+    int sum=0;
+    int temp=num;
+    
+    while(temp>0){
+        sum=sum+temp%10;
+        temp=temp/10;
+    }
+    int last_digit=num%10;
+    
+    printf("%d is divisible by 1\n",num);
+    if(num%2==0){
+        printf("%d is divisible by 2\n",num);
+    }
+    if(sum%3==0){
+        printf("%d is divisible by 3\n",num);
+    }
+    if(num%4==0){
+        printf("%d is divisible by 4\n",num);
+    }
+    if(last_digit==0 || last_digit==5){
+        printf("%d is divisible by 5\n",num);
+    }
+    if(num%2==0 && num%3==0){
+        printf("%d is divisible by 6\n");
+    }
+    if(num%7==0){
+        printf("%d is divisible by 7\n");
+    }
+    if((num%1000)%8==0 || num%8==0){
+        printf("%d is divisible by 8\n");
+    }
+    if(sum%9==0){
+        printf("%d is divisible by 9\n");
+    }
+    if(last_digit==0){
+        printf("%d is divisible by 10\n");
+    }
+    if(num%11==0){
+        printf("%d is divisible by 11\n");
+    }
+
+    return 0;
+}
