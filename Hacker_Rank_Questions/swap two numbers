@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main(){
+
+    int num_1;
+    int num_2;
+    int temp;
+    
+    if(num_1>=1000000 || num_1<-1000000){
+        return 0;
+    }
+    if(num_2>=1000000 || num_2<-1000000){
+        return 0;
+    }
+
+    scanf("%d",&num_1);
+    scanf("%d",&num_2);
+
+    temp=num_1;
+    num_1=num_2;
+    num_2=temp;
+    printf("a = %d\n",num_1);
+    printf("b = %d",num_2);
+
+    return 0;
+}
