@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the number for digitt count: ");
+    scanf("%d",&n);
+    
+    int temp=n;
+    int count=0;
+    
+    while(temp>0){
+        temp=temp/10;
+        count++;
+    }
+    printf("there are %d number of digits in the entered number",count);
+    
+    return 0;
+}
