@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    printf("this is the form for quadratic equation: ax²+bx+c\n");
+    
+    printf("enter 'a' 'b' and 'c'\n");
+    int a,b,c;
+    scanf("%d",&a);
+    scanf("%d",&b);
+    scanf("%d",&c);
+    int root =(b*b)-4*a*c;
+    int root1;
+    int root2;
+    root1= (-b+(sqrt(root)))/(2*a);
+    root2= (-b-(sqrt(root)))/(2*a);
+    
+    printf("the 1st root is %d\n",root1);
+    printf("the 2nd root is %d\n",root2);
+    
+    return 0;
+}
