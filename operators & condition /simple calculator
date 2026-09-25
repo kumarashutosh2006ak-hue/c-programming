@@ -27,6 +27,9 @@ int main()
         
         case'%':printf("%d",num1%num2);
         break;
+
+        default:printf("Invalid operation");
+        break;
     }
 
     return 0;
