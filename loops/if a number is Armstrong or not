@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter a number to check if it is a armstrong number or not: ");
+    scanf("%d",&n);
+    
+    int temp=1; 
+    int count=0;
+    int sum=0;
+    int n2=n;
+    int cont=n2;
+    int power;
+    
+    while(n>0){
+        count++;
+        n=n/10;
+    }
+    
+    while(n2>0){
+        power=1;
+        temp=n2%10;
+        for(int i=1; i<=count; i++){
+            power=power*temp;
+        }
+        sum=sum+power;
+        n2=n2/10;
+    }
+    
+    if(cont==sum){
+        printf("it is a armstrong number");
+    }
+    else{
+        printf("it is not a armstrong number ");
+    }
+    
+    return 0;
+}
