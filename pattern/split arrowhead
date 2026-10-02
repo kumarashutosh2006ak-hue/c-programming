@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int n;
+    printf("enter the height of arrow: ");
+    scanf("%d",&n);
+    int p=n;
+    
+    
+    for(int i=1; i<=p*2-1; i++){
+        for(int j=1; j<=p*2-1 ; j++){
+            if(j==p || j==p-i+1 || j==p+i-1){
+                printf("*");
+            }
+            else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
