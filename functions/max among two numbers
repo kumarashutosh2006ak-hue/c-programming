@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int max(int a, int b);
+    
+    int num1;
+    int num2;
+    printf("enter the 1st number: ");
+    scanf("%d",&num1);
+    printf("enter the 2nd number: ");
+    scanf("%d",&num2);
+    
+    int c=max(num1,num2);
+    printf("the max among two is %d",c);
+    
+    return 0;
+}
+
+int max(int a, int b){
+    if(a>b){
+        return a;
+    }
+    else{
+        return b;
+    }
+    
+}
