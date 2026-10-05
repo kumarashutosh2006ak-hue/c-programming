@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int expo(int a,int b);
+    printf("enter the numbers in format a^x\n");
+    int num1;
+    int num2;
+    
+    printf("enter a number: ");
+    scanf("%d",&num1);
+    printf("enter the power: ");
+    scanf("%d",&num2);
+    
+    int power=expo(num1,num2);
+    printf("%d",power);
+    
+    return 0;
+}
+
+int expo(int a, int b){
+    int temp=1;
+    for(int i=1; i<=b; i++){
+        temp=temp*a;
+    }
+    return temp;
+}
