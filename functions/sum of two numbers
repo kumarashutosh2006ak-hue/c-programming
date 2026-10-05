@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main()
+{
+    int sum(int a, int b);
+    
+    int num1;
+    int num2;
+    printf("enter the 1st number: ");
+    scanf("%d",&num1);
+    printf("enter the 2nd number: ");
+    scanf("%d",&num2);
+    
+    int c=sum(num1,num2);
+    printf("the sum is %d",c);
+    
+    return 0;
+}
+
+int sum(int a, int b){
+        return a+b;
+    }
