@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main()
+{
+    int lcm(int a, int b);
+    int num1;
+    int num2;
+    int l;
+    printf("program to find LCM\n");
+    printf("enter the 1st number: ");
+    scanf("%d",&num1);
+    printf("enter the 2nd number: ");
+    scanf("%d",&num2);
+    
+    l=lcm(num1,num2);
+    printf("%d is the lcm of %d and %d",l,num1,num2);
+    
+    return 0;
+}
+
+int lcm(int a,int b){
+    int cm;
+    for(int i=1; i<=a*b; i++){
+        if(i%a==0 && i%b==0){
+            cm=i;
+            break;
+        }
+    }
+    return cm;
+}
