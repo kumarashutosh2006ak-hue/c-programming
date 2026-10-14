@@ -1,0 +1,29 @@
+#include <stdio.h>
+int maximum(int ar[],int a);
+int main()
+{
+    int n;
+    printf("enter the size of array you want to create: ");
+    scanf("%d",&n);
+    int arr[n];
+    
+    for(int i=0; i<=n-1; i++){
+        printf("enter number %d: ",i+1);
+        scanf("%d",&arr[i]);
+    }
+    int max=maximum(arr,n);
+    printf("max number is: %d",max);
+
+    return 0;
+}
+int maximum(int ar[],int a){
+    
+    int max_temp=ar[0];
+    
+    for(int i=0; i<=a-1; i++){
+        if(max_temp<ar[i]){
+            max_temp=ar[i];
+        }
+    }
+    return max_temp;
+}
