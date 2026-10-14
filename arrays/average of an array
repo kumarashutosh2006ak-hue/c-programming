@@ -1,0 +1,25 @@
+#include <stdio.h>
+float average(int ar[], int a);
+int main() {
+
+    int n;
+    printf("enter the number of elements you want in array: ");
+    scanf("%d",&n);
+    int arr[n];
+    
+    for(int i=0; i<=n-1; i++){
+        printf("enter element %d: ",i+1);
+        scanf("%d",&arr[i]);
+    }
+    double avg=average(arr,n);
+    printf("the average is: %.2f",avg);
+}
+
+float average(int ar[], int a){
+    double sum=0;
+    for(int i=0; i<=a-1;i++ ){
+        sum=sum+ar[i];
+    }
+    double temp_avg=sum/a;
+    return temp_avg;
+}
