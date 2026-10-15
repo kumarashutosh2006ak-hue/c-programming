@@ -1,0 +1,37 @@
+#include<stdio.h>
+#include<stdlib.h>
+int* create_array(int size);
+int* reverse(int *ar, int size); 
+int main(){
+    int n;
+    printf("enter the size of array you want to create: ");
+    scanf("%d",&n);
+
+    int *my_arr=create_array(n);
+    int *rev_array=reverse(my_arr,n);
+
+    for(int i=0; i<=n-1; i++){
+        printf("%d ",rev_array[i]);
+    }
+    
+    free(my_arr);
+    free(rev_array);
+    return 0;
+}
+int* create_array(int size){
+    int *arr = (int*)malloc(size * sizeof(int));
+
+    for(int i=0; i<=size-1; i++){
+        printf("enter element %d: ",i+1);
+        scanf("%d",arr+i);
+    }
+    return arr;
+}
+int* reverse(int *ar, int size){
+    int *temp = (int*)malloc(size * sizeof(int));
+
+    for(int i=0; i<=size-1; i++){
+        temp[i]=ar[size-1-i];
+    }
+    return temp;
+}
