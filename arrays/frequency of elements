@@ -1,0 +1,60 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int *make_array(int size);
+void count_freq(int ar[],int size);
+int main()
+{
+    int n;
+    printf("enter the size of array: ");
+    scanf("%d",&n);
+    
+    int *arr=make_array(n);
+    
+    count_freq(arr,n);
+    
+    
+    free(arr);
+    return 0;
+}
+int * make_array(int size){
+    
+    int *temp=(int*)malloc(size*sizeof(int));
+    for(int i=0; i<size; i++){
+        printf("enter value for slot %d: ",i+1);
+        scanf("%d",temp+i);
+    }
+    return temp;
+}
+
+//frequency counting function
+
+void count_freq(int ar[],int size){
+    
+    int temp_arr[size];
+    
+    for(int i=0; i<size; i++){
+        temp_arr[i]=0;
+    }
+    
+     for(int i=0; i<size; i++){
+        for(int j=0; j<size; j++){
+            if(ar[i]==ar[j]){
+                temp_arr[i]+=1;
+            }
+        }
+    }
+    for(int i=0; i<size; i++){
+        int seen=0;
+        for(int j=0; j<i; j++){
+            if(ar[i]==ar[j]){
+                seen=1;
+                break;
+            }
+        }
+        if(!seen){
+            printf("the frequency of element %d is: %d\n",ar[i],temp_arr[i]);
+        }
+        
+    }
+}
