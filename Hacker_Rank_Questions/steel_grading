@@ -1,0 +1,74 @@
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdlib.h>
+void grading(int h, float c, int t);
+int main()
+{
+    int a,c;
+    float b;
+    
+    scanf("%d",&a);
+    scanf("%f",&b);
+    scanf("%d",&c);
+    
+    grading(a,b,c);
+    
+
+    return 0;
+}
+void grading(int h,float c,int t){
+    bool con1=false;
+    bool con2=false;
+    bool con3=false;
+    int grade;
+    
+    if(h<0 || h>500 || c<0.0 || c>1.0 || t<0 || t>50000 ){
+        exit(0);
+    }
+    if(h>50){
+      con1=true;
+    }
+    if(c<0.7){
+        con2=true;
+    }
+    if(t>5600){
+        con3=true;
+    }
+    
+    //grading
+    if(con1==true && con2==true && con3==true){
+        grade=10;
+    }
+    else if(con1==true && con2==true && con3==false){
+        grade=9;
+    }
+    else if(con2==true && con3==true && con1==false){
+        grade=8;
+    }
+    else if(con1==true && con3==true && con2==false){
+        grade=7;
+    }
+    
+    else if((con1==true  && con2==false && con3==false)||
+            (con1==false && con2==true  && con3==false)||
+            (con1==false && con2==false && con3==true )){
+                grade=6;
+            }
+            
+    else if(con1==false && con2==false && con3==false){
+        grade=5;
+    }
+    printf("The grade of the steel is: %d\n",grade);
+    if(grade==10){
+        printf("All of the conditions met.");
+    }
+    else if(grade<10 && grade>6){
+        printf("Two conditions met.");
+    }
+    else if(grade==6){
+        printf("Only one condition met.");
+    }
+    else{
+        printf("None of the conditions met.");
+    }
+}
