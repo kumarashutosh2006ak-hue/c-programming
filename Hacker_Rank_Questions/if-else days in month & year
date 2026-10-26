@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+void days_years(int mon,int yea);
+int main(){
+
+    int month, year;
+    scanf("%d",&month);
+    scanf("%d",&year);
+    bool temp=true;
+    
+    if(month>12 || month<1){
+        printf("Invalid Month\n");
+        temp=false;
+    }
+    if(year<1 || year>1000000){
+        printf("Invalid Year\n");
+        temp=false;
+    }
+    if(!temp){
+        return 0;
+    }
+    
+    days_years(month,year);
+    
+
+    return 0;
+}
+void days_years(int mon,int yea){
+    bool lp_yr=false;
+    
+    if((yea%4==0 && yea%100!=0)|| (yea%400==0)){
+        lp_yr=true;
+    }
+    if(lp_yr){
+        switch(mon){
+            case 1  :
+            case 3  :
+            case 5  :
+            case 7  :
+            case 8  :
+            case 10 :
+            case 12 :printf("31");
+                     break;
+            
+            case 2  :printf("29");
+                     break;
+            
+            case 4  :
+            case 6  :
+            case 9  :
+            case 11 :printf("30");
+                     break;
+        }
+    }
+    else{
+        switch(mon){
+            case 1  :
+            case 3  :
+            case 5  :
+            case 7  :
+            case 8  :
+            case 10 :
+            case 12 :printf("31");
+                     break;
+            
+            case 2  :printf("28");
+                     break;
+            
+            case 4  :
+            case 6  :
+            case 9  :
+            case 11 :printf("30");
+                     break;
+        }
+    }
+    
+}
