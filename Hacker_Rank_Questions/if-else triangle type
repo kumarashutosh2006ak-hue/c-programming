@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+void triangle_type(int a, int b, int c);
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d",&a,&b,&c);
+    printf("Lengths: [%d, %d, %d]\n",a, b, c);
+
+    triangle_type(a,b,c);
+
+    return 0;
+}
+
+void triangle_type(int num1, int num2, int num3){
+    if(num1==num2 && num2==num3){
+        printf("Type: Equilateral\n"); 
+        printf("All sides are of the same length. ");
+        exit(0);
+    }
+    else if((num1==num2 && num1+num2>num3)||
+            (num1==num3 && num1+num3>num2)||
+            (num2==num3 && num2+num3>num1)){
+                
+        printf("Type: Isosceles\n");
+        printf("Exactly two sides are equal.");
+        exit(0);
+    }
+    else if((num1!=num2 && num2!=num3 && num1!=num3) && (num1+num2>num3&&
+                                                        (num1+num3>num2&&
+                                                        (num2+num3>num1)))){
+                                              
+        printf("Type: Scalene\n");
+        printf("All sides are of different lengths.");
+        exit(0);
+    }
+    else{
+        printf("Type: Invalid\n");
+        printf("Cannot form a valid shape.");
+        exit(0);
+    }
+}
