@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int fib(int a);
+int main()
+{
+    printf("program to print nth trem from fibonacci series\n\n");
+    int n;
+    printf("enter the term number you want to print: ");
+    scanf("%d",&n);
+    
+    int num=fib(n);
+    printf("the %d term is %d",n,num);
+
+    return 0;
+}
+int fib(int a){
+    if(a==0 || a==1){
+        return a;
+    }
+    else{
+        return fib(a-1)+fib(a-2);
+    }
+}
