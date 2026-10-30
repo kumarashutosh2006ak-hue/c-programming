@@ -42,9 +42,9 @@ int maze(){
                             case 2:printf("Poor luck, Game Over!\n");
                             return 0;
                         }
-                   break;
-               }
-    
+                break;
+            }
+        break;
         case 2:printf("Player chooses the Middle path.\n");
                scanf("%d",&n3);
                /*puzzel: I am a three-digit number. 
@@ -68,7 +68,7 @@ int maze(){
                    case 3:printf("Congratulations!! You won the treasure.\n");
                    return 0;
                }
-               
+            break; 
                
         case 3:printf("Player chooses the Right path.\n");
                scanf("%d",&n4);
